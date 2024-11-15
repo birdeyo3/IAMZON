@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon - Online Shopping</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        /* Header */
+        header {
+            background-color: #131921;  /* Amazon's dark blue background */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #232f3e;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 10px;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            background-color: #4a90e2;
+            border-radius: 5px;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        /* Product Cards */
+        .product {
+            background-color: white;
+            width: 280px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product h3 {
+            margin: 15px 0;
+            font-size: 1.4em;
+        }
+
+        .product p {
+            color: #555;
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        .product button {
+            background-color: #ff9900;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .product button:hover {
+            background-color: #ff7a00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #131921;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Contact Form Section */
+        .contact-form {
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 80%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background-color: #ff9900;
+            padding: 12px 30px;
+            font-size: 1.2em;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff7a00;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to IAMZON!</h1>
+        <p>Your favorite place to shop online</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">Categories</a>
+        <a href="#">Customer Service</a>
+        <a href="#">Sign In</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1587226038907-81a6f48b9447" alt="Wireless Headphones">
+            <h3>Wireless Headphones</h3>
+            <p>$49.99</p>
+            <button onclick="addToCart('Wireless Headphones')">Add to Cart</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1561586584-05a6c4da8a92" alt="Smartphone">
+            <h3>Smartphone</h3>
+            <p>$799.99</p>
+            <button onclick="addToCart('Smartphone')">Add to Cart</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Gaming Laptop">
+            <h3>Gaming Laptop</h3>
+            <p>$1,499.99</p>
+            <button onclick="addToCart('Gaming Laptop')">Add to Cart</button>
+        </div>
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1604012429813-e7b2505c2740" alt="Smart Watch">
+            <h3>Smart Watch</h3>
+            <p>$199.99</p>
+            <button onclick="addToCart('Smart Watch')">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Amazon Clone - All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to simulate adding an item to the shopping cart
+        function addToCart(productName) {
+            alert("You added " + productName + " to your cart!");
+        }
+    </script>
+
+</body>
+</html>
